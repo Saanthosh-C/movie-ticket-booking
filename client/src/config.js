@@ -1,4 +1,4 @@
-const backendUrl="http://localhost:5000"
+const backendUrl="https://movie-ticket-booking-68bq.onrender.com"
 
 
 export default backendUrl
