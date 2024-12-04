@@ -1,0 +1,102 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url("https://c1.wallpaperflare.com/preview/570/413/91/interior-theatre-theater-empty-theater.jpg");
+  
+}
+
+.home {
+  text-align: center;
+  padding: 20px;
+  
+}
+
+.movies {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px;
+}
+
+.movie-card {
+  border-radius: 8px;
+
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.image {
+  width: 500px;
+  height: 500px;
+  object-fit: contain;
+}
+
+button {
+  margin: 5px;
+  padding: 10px;
+  background-color: #000000;
+  color: white;
+  border: none; 
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #5a5757;
+}
+
+.booking-form {
+  text-align: center;
+  padding: 20px;
+}
+
+.booking-form form {
+  display: inline-block;
+  text-align: left;
+}
+
+.booking-form label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.showtimes-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border: none;
+  list-style: none;
+  padding: 0;
+}
+
+.time {
+  text-align: center;
+}
+
+.btn {
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: medium;
+}
+
+.btn:hover {
+  background-color: #424547;
+}
+
+.title{
+  color: white;
+}
+
+.heading{
+  color: white;
+}
+
+.names{
+  color: white;
+}
+
+.admin{
+  font-size: large;
+}
