@@ -28,7 +28,7 @@ const Home = ({ onBook }) => {
   return (
     <div className="home">
       <h1 className="heading">My Show</h1>
-      <div className="movies">
+      <div className="flex flex-wrap justify-center gap-4 p-4">
         {movies.map((movie) => (
           <div key={movie.screen}>
             <h2 className="title">{movie.name}</h2>

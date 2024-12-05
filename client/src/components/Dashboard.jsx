@@ -2,12 +2,27 @@ import React, { useEffect, useState } from "react";
 import Graph from "./Graph"; // Ensure Graph is implemented correctly
 import axios from "axios";
 import "../dashboard.css";
+import MobileDashboard from '../MobileDashboard';
+import DesktopDashboard from '../DesktopDashboard';
 
 const Dashboard = () => {
   const [totalTickets, setTotalTickets] = useState(0);
   const [soldTickets, setSoldTickets] = useState(0);
   const [availableTickets, setAvailableTickets] = useState(0); // New state for available tickets
   const [userBookings, setUserBookings] = useState([]);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      const screenWidth = window.innerWidth;
+      setIsMobile(screenWidth < 768);
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   useEffect(() => {
     axios
@@ -76,6 +91,9 @@ const Dashboard = () => {
       <div className="graph-section">
         <Graph />
       </div>
+      <div>
+      {isMobile ? <MobileDashboard /> : <DesktopDashboard />}
+    </div>
     </div>
   );
 };

@@ -3,42 +3,47 @@ body {
   margin: 0;
   padding: 0;
   background-image: url("https://c1.wallpaperflare.com/preview/570/413/91/interior-theatre-theater-empty-theater.jpg");
-  
+  background-size: cover;
+  background-attachment: fixed;
+  color: #ffffff;
 }
 
 .home {
   text-align: center;
   padding: 20px;
-  
 }
 
 .movies {
   display: flex;
   justify-content: space-around;
   margin: 20px;
+  flex-wrap: wrap;
 }
 
 .movie-card {
   border-radius: 8px;
-
   text-align: center;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 10px;
+  color: white;
 }
 
 .image {
-  width: 500px;
-  height: 500px;
-  object-fit: contain;
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
 }
 
 button {
   margin: 5px;
-  padding: 10px;
+  padding: 10px 15px;
   background-color: #000000;
   color: white;
-  border: none; 
+  border: none;
   border-radius: 4px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 button:hover {
@@ -53,11 +58,28 @@ button:hover {
 .booking-form form {
   display: inline-block;
   text-align: left;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  border-radius: 8px;
+  color: white;
 }
 
 .booking-form label {
   display: block;
   margin-bottom: 10px;
+}
+
+.booking-form input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.button-group button {
+  padding: 10px 20px;
 }
 
 .showtimes-grid {
@@ -85,18 +107,24 @@ button:hover {
   background-color: #424547;
 }
 
-.title{
+.title {
   color: white;
 }
 
-.heading{
+.heading {
   color: white;
 }
 
-.names{
+.names {
   color: white;
 }
 
-.admin{
+.admin {
   font-size: large;
+  background-color: #5a5757;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
 }
