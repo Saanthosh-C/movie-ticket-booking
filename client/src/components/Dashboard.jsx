@@ -11,7 +11,7 @@ const Dashboard = () => {
 
   useEffect(() => {
     axios
-      .post("https://movie-ticket-booking-ixaa.onrender.com")
+      .post("https://movie-ticket-booking-ixaa.onrender.com/api/dashboard")
       .then((response) => {
         const { totalTickets, soldTickets, userBookings } = response.data;
         setTotalTickets(totalTickets || 0);
